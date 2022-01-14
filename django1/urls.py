@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from .views import zargar
 
 urlpatterns = [
+    #path('', zargar.as_view()),
     path('admin/', admin.site.urls),
+    path(r'ckeditor/', include('ckeditor_uploader.urls'))
 ]

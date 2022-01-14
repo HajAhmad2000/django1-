@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+venv/
+django1/__pychache__/
+db.sqlite3
+blog/migrations/
+.env
+files/

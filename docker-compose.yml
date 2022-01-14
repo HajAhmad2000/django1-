@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  django1_postgresql:
+    image: postgres:12
+    container_name: django1_postgresql
+    volumes:
+      - django1_postgresql:/var/lib/pstgresql/data
+    restart: always
+    env_file: .env
+    ports:
+    - "5432:5432"
+    networks:
+      - django1_network
+volumes:
+  django1_postgresql:
+    external: true
+networks:
+  django1_network:
+    external: true
+
